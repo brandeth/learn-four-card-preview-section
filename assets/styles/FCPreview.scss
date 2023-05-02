@@ -1,0 +1,83 @@
+.FCPreview {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 4rem;
+
+    &-cardItem {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border-top: 4px solid;
+
+        &.is-border-top {
+            &-cyan {
+                border-top-color: var(--cyan);
+            }
+
+            &-red {
+                border-top-color: var(--red);
+            }
+
+            &-orange {
+                border-top-color: var(--orange);
+            }
+
+            &-blue {
+                border-top-color: var(--blue);
+            }
+        }
+
+        h4 {
+            margin-bottom: 0.25rem;
+            font-size: 22px;
+            color: var(--very-dark-blue);
+        }
+
+        p {
+            margin-bottom: 2rem;
+            color: var(--grayish-blue);
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+ 
+    &-cardList {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        gap: 1.5rem;
+
+        .FCPreview {
+            &-cardGrouped {
+                display: grid;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+            }
+        }
+    }
+
+
+    &-overview {
+        text-align: center;
+        .FCPreview {
+            &-body {
+                color: var(--grayish-blue);
+            }
+            
+            &-title {
+                font-size: 24px;
+                margin-bottom: 1rem;
+                color: var(--very-dark-blue);
+
+                div:nth-child(1) {
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}

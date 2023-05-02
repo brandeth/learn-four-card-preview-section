@@ -1,2 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 @import "./variables.scss";
 @import "./reset.scss";
+@import "./FCPreview.scss";
+
+.Main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+
+    .attribution {
+        font-size: 12px;
+        text-align: center;
+        color: var(--clr-grey-3);
+        margin-top: 2rem;
+        a {
+            color: var(--clr-primary-5);
+        }
+    }
+}

@@ -4,6 +4,7 @@ const cardList = ref<FCPreviewCardType[]>([
     title: "Supervisor",
     body: "Monitors activity to identify project roadblocks",
     icon: "supervisor",
+    color: "cyan",
   },
   {
     isGrouped: true,
@@ -12,11 +13,13 @@ const cardList = ref<FCPreviewCardType[]>([
         title: "Team Builder",
         body: "Scans our talent network to create the optimal team for your project",
         icon: "team-builder",
+        color: "red",
       },
       {
         title: "Karma",
         body: "Regularly evaluates our talent to ensure quality",
         icon: "karma",
+        color: "orange",
       },
     ],
   },
@@ -24,6 +27,7 @@ const cardList = ref<FCPreviewCardType[]>([
     title: "Calculator",
     body: "Uses data from past projects to provide better delivery estimates",
     icon: "calculator",
+    color: "blue",
   },
 ]);
 </script>

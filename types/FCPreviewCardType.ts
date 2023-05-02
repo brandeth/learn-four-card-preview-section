@@ -4,4 +4,5 @@ interface FCPreviewCardType {
   icon?: string;
   isGrouped?: boolean;
   cards?: FCPreviewCardType[];
+  color?: string;
 }
