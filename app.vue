@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "Frontend Mentor | [Challenge Title] | Rey Garcia",
+  title: "Frontend Mentor | 4 Card Preview Section | Rey Garcia",
   meta: [
     {
       name: "description",
