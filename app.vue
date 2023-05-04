@@ -17,6 +17,7 @@ useHead({
 <template>
   <div class="Main">
     <FCPreview />
+    <ChatBot />
     <footer>
       <div class="attribution">
         <div>
