@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 useHead({
-  title: "Frontend Mentor | 4 Card Preview Section | Rey Garcia",
+  title: "Frontend Mentor | 4 Card Preview Section | Offshorly",
   meta: [
     {
       name: "description",
-      content: "Challenge by Frontend Mentor. Coded by Rey Garcia.",
+      content: "Challenge by Frontend Mentor. Coded by Offshorly.",
     },
     {
       name: "viewport",
@@ -18,7 +18,7 @@ useHead({
   <div class="Main">
     <FCPreview />
     <ChatBot />
-    <footer>
+    <!-- <footer>
       <div class="attribution">
         <div>
           Challenge by
@@ -28,9 +28,9 @@ useHead({
         </div>
         <div>
           Coded by
-          <a href="https://github.com/brandeth" target="_blank">Rey Garcia</a>
+          <a href="https://github.com/brandeth" target="_blank">Offshorly</a>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>

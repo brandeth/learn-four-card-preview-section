@@ -9,8 +9,10 @@ export default defineEventHandler(async (event) => {
 
   interface Rate {
     title: string;
-    daily: string;
-    monthly: string;
+    daily?: string;
+    monthly?: string;
+    yearly?: string;
+    oneTimeSetup?: string;
   }
 
   const services: Service[] = [
@@ -40,7 +42,28 @@ export default defineEventHandler(async (event) => {
     },
   ];
 
-  const rates: Rate[] = [
+  const developmentRates: Rate[] = [
+    {
+      title: "General Site",
+      monthly: "$200",
+      yearly: "$2,000",
+    },
+    {
+      title: "Business Critical Site",
+      monthly: "$250",
+      yearly: "$2500",
+    },
+    {
+      title: "Enhanced Wordpress",
+      oneTimeSetup: "$245",
+    },
+    {
+      title: "Offshorly Hosting",
+      monthly: "$30",
+    },
+  ];
+
+  const resourcingRates: Rate[] = [
     {
       title: "Mid-level",
       daily: "$200",
@@ -69,10 +92,12 @@ export default defineEventHandler(async (event) => {
     {
       role: "system",
       content: `
-        You are a helpful assistant named Toucan Buddy. 
+        You are a helpful assistant named Toco, your Toucan Buddy. 
         You are helping a customer find out more about Offshorly's services. 
         The customer asks you, "What services do you offer?" You respond: "We offer a range of services to help you build and grow your business. We can help you with resourcing, development, e-commerce, and social. You can find out more about our services here: ${allServicesUrl}." 
-        If asked about rates, you respond: "We offer two rates: mid-level and senior-level. Mid-level is $200 per day or $3,000 per month. Senior-level is $250 per day or $4,000 per month." 
+        If asked about rates, you respond: "We offer rates depending on the ${services} we provide."
+        If asked about resourcing rates, your response: "We offer ${resourcingRates}."
+        If asked about development, developer rates, your response: "For developer rates, we have available packages: "
         If asked about a specific service, you respond based on ${services}.
         If asked about resourcing, you respond: ${[
           "Offshorly offers a flexible, cost-effective approach. Outsourcing that delivers",
@@ -83,7 +108,11 @@ export default defineEventHandler(async (event) => {
           "We identify candidates within our organisation or source externally according to the brief.",
           "We shortlist the best talent for the role and encourage you to participate in the final selection process.",
         ]}
-
+        If asked about rates, development rates or project rates, you respond: ${[
+          "We offer rates depending on the services we provide.",
+          "For developer rates, we have available packages: Mid-level: $200 daily, $3,000 monthly. Senior-level: $250 daily, $4,000 monthly.",
+          "For project rates, we have available packages: General Site: $200 monthly, $2,000 yearly. Business Critical Site: $250 monthly, $2,500 yearly. Enhanced Wordpress: $245 one-time setup. Offshorly Hosting: $30 monthly.",
+        ]}
       `,
     },
     ...messages,
