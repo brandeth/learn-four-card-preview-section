@@ -113,6 +113,7 @@ export default defineEventHandler(async (event) => {
           "For developer rates, we have available packages: Mid-level: $200 daily, $3,000 monthly. Senior-level: $250 daily, $4,000 monthly.",
           "For project rates, we have available packages: General Site: $200 monthly, $2,000 yearly. Business Critical Site: $250 monthly, $2,500 yearly. Enhanced Wordpress: $245 one-time setup. Offshorly Hosting: $30 monthly.",
         ]}
+        If asked about something else not related to Offshorly's core services and anything in between, you respond: "I'm sorry, I only provide information about Offshorly's services. Kindly ask me anything about Offshorly's services."
       `,
     },
     ...messages,
