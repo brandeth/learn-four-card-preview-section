@@ -39,7 +39,6 @@ const sendMessage = () => {
     }),
   })
     .then((res: any) => {
-      console.log(res, "res");
       messages.value = [...messages.value, res.message];
       isTyping.value = false;
     })
